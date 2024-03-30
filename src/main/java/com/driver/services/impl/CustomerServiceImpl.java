@@ -60,7 +60,7 @@ public class CustomerServiceImpl implements CustomerService {
 		Driver driverdtl = driver.get();
 
 		Cab cabdtl = driverdtl.getCab();
-		Integer price = cabdtl.getRate()*distanceInKm;
+		Integer price = cabdtl.getPerKmRate()*distanceInKm;
 
 		Customer customerdtl = customer.get();
 
@@ -69,7 +69,7 @@ public class CustomerServiceImpl implements CustomerService {
 		booking.setFromLocation(fromLocation);
 		booking.setToLocation(toLocation);
 		booking.setStatus(TripStatus.CONFIRMED);
-		booking.setDistance(distanceInKm);
+		booking.setDistanceInKm(distanceInKm);
 		booking.setDriver(driverdtl);
 		booking.setCustomer(customerdtl);
 		booking.setBill(price);

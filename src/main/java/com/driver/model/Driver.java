@@ -20,6 +20,7 @@ public class Driver{
     @OneToMany(mappedBy = "driver", cascade = CascadeType.ALL)
     private List<TripBooking> tripBookings = new ArrayList<>();
 
+
     public String getMobile() {
         return mobile;
     }
@@ -69,4 +70,5 @@ public class Driver{
     public void setTripBookings(List<TripBooking> tripBookings) {
         this.tripBookings = tripBookings;
     }
+
 }

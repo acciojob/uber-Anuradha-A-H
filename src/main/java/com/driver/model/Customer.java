@@ -11,8 +11,7 @@ public class Customer{
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer customerId;
-    private String name;
-    private String username;
+    private String mobile;
     private String password;
 
     public Integer getCustomerId() {
@@ -23,20 +22,12 @@ public class Customer{
         this.customerId = customerId;
     }
 
-    public String getName() {
-        return name;
+    public String getMobile() {
+        return mobile;
     }
 
-    public void setName(String name) {
-        this.name = name;
-    }
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
+    public void setMobile(String mobile) {
+        this.mobile = mobile;
     }
 
     public String getPassword() {
