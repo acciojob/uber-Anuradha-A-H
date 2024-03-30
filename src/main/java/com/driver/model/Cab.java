@@ -45,7 +45,7 @@ public class Cab{
         this.driver = driver;
     }
 
-    public boolean isAvailable() {
+    public boolean getAvailable() {
         return available;
     }
 
